@@ -1,11 +1,6 @@
 <script lang="ts">
   import RangeImage from "./RangeImage.svelte";
-
-  interface RangeImageInterface {
-    title: string;
-    imageSrc: string;
-    alt: string;
-  }
+  import type { RangeImageInterface } from "../types/RangeImage";
 
   let images: RangeImageInterface[] = [
     {
