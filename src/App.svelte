@@ -1,4 +1,11 @@
 <script lang="ts">
+  import UTG from "./components/UTG.svelte";
+  import MP from "./components/MP.svelte";
+  import CO from "./components/CO.svelte";
+  import SB from "./components/SB.svelte";
+  import BB from "./components/BB.svelte";
+  import BTN from "./components/BTN.svelte";
+
   enum Tab {
     UTG,
     MP,
@@ -55,17 +62,17 @@
     {/each}
   </ul>
   {#if activeTab === Tab.UTG}
-    <p>UTG</p>
+    <UTG />
   {:else if activeTab === Tab.MP}
-    <p>MP</p>
+    <MP />
   {:else if activeTab === Tab.CO}
-    <p>CO</p>
+    <CO />
   {:else if activeTab === Tab.BT}
-    <p>BTN</p>
+    <BTN />
   {:else if activeTab === Tab.SB}
-    <p>SB</p>
+    <SB />
   {:else}
-    <p>BB</p>
+    <BB />
   {/if}
 </main>
 
