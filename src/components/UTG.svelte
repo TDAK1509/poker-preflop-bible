@@ -13,6 +13,11 @@
       imageSrc: "assets/images/open_UTG.png",
       alt: "Open UTG Image",
     },
+    {
+      title: "vs 3bet",
+      imageSrc: "assets/images/vs3bet_UTG-IP-OOP.png",
+      alt: "UTG vs 3bet Image",
+    },
   ];
 </script>
 
