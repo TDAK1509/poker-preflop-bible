@@ -1,6 +1,6 @@
 <script lang="ts">
   enum Tab {
-    UG,
+    UTG,
     MP,
     CO,
     BT,
@@ -8,7 +8,34 @@
     BB,
   }
 
-  let activeTab: Tab = Tab.UG;
+  const tabs = [
+    {
+      tab: Tab.UTG,
+      label: "UTG",
+    },
+    {
+      tab: Tab.MP,
+      label: "MP",
+    },
+    {
+      tab: Tab.CO,
+      label: "CO",
+    },
+    {
+      tab: Tab.BT,
+      label: "BTN",
+    },
+    {
+      tab: Tab.SB,
+      label: "SB",
+    },
+    {
+      tab: Tab.BB,
+      label: "BB",
+    },
+  ];
+
+  let activeTab: Tab = Tab.UTG;
 
   function changeTab(tab: Tab) {
     activeTab = tab;
@@ -17,50 +44,17 @@
 
 <main>
   <ul>
-    <li>
-      <button
-        on:click={() => {
-          changeTab(Tab.UG);
-        }}>UG</button
-      >
-    </li>
-    <li>
-      <button
-        on:click={() => {
-          changeTab(Tab.MP);
-        }}>MP</button
-      >
-    </li>
-    <li>
-      <button
-        on:click={() => {
-          changeTab(Tab.CO);
-        }}>CO</button
-      >
-    </li>
-    <li>
-      <button
-        on:click={() => {
-          changeTab(Tab.BT);
-        }}>BT</button
-      >
-    </li>
-    <li>
-      <button
-        on:click={() => {
-          changeTab(Tab.SB);
-        }}>SB</button
-      >
-    </li>
-    <li>
-      <button
-        on:click={() => {
-          changeTab(Tab.BB);
-        }}>BB</button
-      >
-    </li>
+    {#each tabs as tab}
+      <li>
+        <button
+          on:click={() => {
+            changeTab(tab.tab);
+          }}>{tab.label}</button
+        >
+      </li>
+    {/each}
   </ul>
-  {#if activeTab === Tab.UG}
+  {#if activeTab === Tab.UTG}
     <p>UTG</p>
   {:else if activeTab === Tab.MP}
     <p>MP</p>
