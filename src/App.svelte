@@ -110,15 +110,20 @@
       width: 100%;
       font-size: 1rem;
       padding: 0.5em 1em;
+      background: none;
       border: none;
-      border-radius: 4px;
+      border: 1px solid transparent;
+      border-bottom: 1px solid #ccc;
 
       &:hover {
         opacity: 0.7;
       }
 
       &.active {
-        background: green;
+        border: 1px solid #ccc;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background: #333333;
         color: #fff;
       }
     }
