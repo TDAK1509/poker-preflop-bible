@@ -44,17 +44,23 @@
 
   let activeTab: Tab = Tab.UTG;
 
+  let getButtonClass: (tab: Tab) => string;
+  $: getButtonClass = (tab: Tab) => {
+    return activeTab === tab ? "active" : "";
+  };
+
   function changeTab(tab: Tab) {
     activeTab = tab;
   }
 </script>
 
 <main>
-  <nav>
+  <nav class="nav">
     <ul>
       {#each tabs as tab}
         <li>
           <button
+            class={getButtonClass(tab.tab)}
             on:click={() => {
               changeTab(tab.tab);
             }}>{tab.label}</button
@@ -86,28 +92,35 @@
     margin: 0 auto;
   }
 
-  nav {
+  .nav {
     position: sticky;
     top: 0;
     background: #fff;
     padding: 2em 0;
-  }
 
-  ul {
-    display: flex;
-    justify-content: space-between;
-  }
+    ul {
+      display: flex;
+    }
 
-  ul button {
-    font-size: 1rem;
-    padding: 0.5em 1em;
-    background: green;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    li {
+      flex: 1;
+    }
 
-    &:hover {
-      opacity: 0.7;
+    button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 4px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &.active {
+        background: green;
+        color: #fff;
+      }
     }
   }
 </style>
