@@ -79,7 +79,7 @@
   {/if}
 </main>
 
-<style>
+<style lang="scss">
   main {
     text-align: center;
     width: 600px;
@@ -105,9 +105,9 @@
     color: #fff;
     border: none;
     border-radius: 4px;
-  }
 
-  ul button:hover {
-    opacity: 0.7;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 </style>
