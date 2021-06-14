@@ -50,17 +50,20 @@
 </script>
 
 <main>
-  <ul>
-    {#each tabs as tab}
-      <li>
-        <button
-          on:click={() => {
-            changeTab(tab.tab);
-          }}>{tab.label}</button
-        >
-      </li>
-    {/each}
-  </ul>
+  <nav>
+    <ul>
+      {#each tabs as tab}
+        <li>
+          <button
+            on:click={() => {
+              changeTab(tab.tab);
+            }}>{tab.label}</button
+          >
+        </li>
+      {/each}
+    </ul>
+  </nav>
+
   {#if activeTab === Tab.UTG}
     <UTG />
   {:else if activeTab === Tab.MP}
@@ -77,4 +80,34 @@
 </main>
 
 <style>
+  main {
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 2em 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul button {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    background: green;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+
+  ul button:hover {
+    opacity: 0.7;
+  }
 </style>
