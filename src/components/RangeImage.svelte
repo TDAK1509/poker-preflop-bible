@@ -2,9 +2,10 @@
   export let title: string = "";
   export let imageSrc: string = "";
   export let alt: string = "";
+  export let className: string = "";
 </script>
 
-<figure class="range-image">
+<figure class="range-image {className}">
   <figcaption>{title}</figcaption>
   <img src={imageSrc} {alt} />
 </figure>

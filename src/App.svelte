@@ -52,23 +52,64 @@
   function changeTab(tab: Tab) {
     activeTab = tab;
   }
+
+  function goToOpenSection() {
+    const section = document.querySelector(".open");
+
+    if (section) {
+      section.scrollIntoView(true);
+    }
+  }
+
+  function goTo3betSection() {
+    const section = document.querySelector(".3bet");
+
+    if (section) {
+      section.scrollIntoView(true);
+    }
+  }
+
+  function goToVs3betSection() {
+    const section = document.querySelector(".vs3bet");
+
+    if (section) {
+      section.scrollIntoView(true);
+    }
+  }
+
+  function goToVs4betSection() {
+    const section = document.querySelector(".vs4bet");
+
+    if (section) {
+      section.scrollIntoView(true);
+    }
+  }
 </script>
 
 <main>
-  <nav class="nav">
-    <ul>
-      {#each tabs as tab}
-        <li>
-          <button
-            class={getButtonClass(tab.tab)}
-            on:click={() => {
-              changeTab(tab.tab);
-            }}>{tab.label}</button
-          >
-        </li>
-      {/each}
+  <header class="header">
+    <nav class="nav">
+      <ul>
+        {#each tabs as tab}
+          <li>
+            <button
+              class={getButtonClass(tab.tab)}
+              on:click={() => {
+                changeTab(tab.tab);
+              }}>{tab.label}</button
+            >
+          </li>
+        {/each}
+      </ul>
+    </nav>
+
+    <ul class="filter">
+      <li><button on:click={goToOpenSection}>Open</button></li>
+      <li><button on:click={goTo3betSection}>3bet</button></li>
+      <li><button on:click={goToVs3betSection}>vs 3bet</button></li>
+      <li><button on:click={goToVs4betSection}>vs 4bet</button></li>
     </ul>
-  </nav>
+  </header>
 
   {#if activeTab === Tab.UTG}
     <UTG />
@@ -92,12 +133,14 @@
     margin: 0 auto;
   }
 
-  .nav {
+  .header {
     position: sticky;
     top: 0;
     background: #fff;
     padding: 2em 0;
+  }
 
+  .nav {
     ul {
       display: flex;
     }
