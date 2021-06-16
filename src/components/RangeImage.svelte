@@ -15,6 +15,8 @@
     margin-top: 2em;
     padding-top: 1em;
     border-top: 1px solid #ccc;
+    --height-header: 154px;
+    scroll-margin-top: var(--height-header);
   }
 
   .range-image figcaption {
