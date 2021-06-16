@@ -7,6 +7,7 @@
       title: "BB v UTG-MP",
       imageSrc: "assets/images/BBvUTG.png",
       alt: "BBvUTG.png",
+      className: "open",
     },
     {
       title: "BB v CO",
@@ -27,6 +28,7 @@
       title: "vs 4bet v UTG-MP",
       imageSrc: "assets/images/vs4bet_BBvUTG-MP.png",
       alt: "vs4bet_BBvUTG-MP.png",
+      className: "vs4bet",
     },
     {
       title: "vs 4bet v CO",
