@@ -126,49 +126,55 @@
   {/if}
 </main>
 
-<style lang="scss">
+<style>
   main {
     text-align: center;
     width: 600px;
     margin: 0 auto;
   }
-
   .header {
     position: sticky;
     top: 0;
     background: #fff;
     padding: 2em 0;
   }
-
-  .nav {
-    ul {
-      display: flex;
-    }
-
-    li {
-      flex: 1;
-    }
-
-    button {
-      width: 100%;
-      font-size: 1rem;
-      padding: 0.5em 1em;
-      background: none;
-      border: none;
-      border: 1px solid transparent;
-      border-bottom: 1px solid #ccc;
-
-      &:hover {
-        opacity: 0.7;
-      }
-
-      &.active {
-        border: 1px solid #ccc;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        background: #333333;
-        color: #fff;
-      }
-    }
+  .nav ul {
+    display: flex;
+  }
+  .nav li {
+    flex: 1;
+  }
+  .nav button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    background: none;
+    border: none;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #ccc;
+  }
+  .nav button:hover {
+    opacity: 0.7;
+  }
+  .nav button.active {
+    border: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: #333;
+    color: #fff;
+  }
+  .filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  .filter button {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    background: lightgrey;
+    border: none;
+  }
+  .filter li ~ li {
+    margin-left: 1em;
   }
 </style>
