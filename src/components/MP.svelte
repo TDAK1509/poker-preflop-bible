@@ -7,16 +7,19 @@
       title: "Open",
       imageSrc: "assets/images/open_MP.png",
       alt: "open_MP.png",
+      className: "open",
     },
     {
       title: "3bet",
       imageSrc: "assets/images/3bet_MPvUTG.png",
       alt: "3bet_MPvUTG.png",
+      className: "three-bet",
     },
     {
       title: "vs 3bet IP",
       imageSrc: "assets/images/vs3bet_MP-IP.png",
       alt: "vs3bet_MP-IP.png",
+      className: "vs3bet",
     },
     {
       title: "vs 3bet OOP",
@@ -27,6 +30,7 @@
       title: "vs 4bet",
       imageSrc: "assets/images/vs4bet_MPvUTG.png",
       alt: "vs4bet_MPvUTG.png",
+      className: "vs4bet",
     },
   ];
 </script>

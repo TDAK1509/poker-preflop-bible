@@ -62,7 +62,7 @@
   }
 
   function goTo3betSection() {
-    const section = document.querySelector(".3bet");
+    const section = document.querySelector(".three-bet");
 
     if (section) {
       section.scrollIntoView(true);
