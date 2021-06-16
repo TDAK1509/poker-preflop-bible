@@ -7,11 +7,13 @@
       title: "Open",
       imageSrc: "assets/images/open_SB.png",
       alt: "open_SB.png",
+      className: "open",
     },
     {
       title: "3bet v UTG & MP",
       imageSrc: "assets/images/3bet_SBvUTG-MP.png",
       alt: "3bet_SBvUTG.png",
+      className: "three-bet",
     },
     {
       title: "3bet v CO",
@@ -27,11 +29,13 @@
       title: "vs 3bet v BB",
       imageSrc: "assets/images/vs3bet_SBvBB.png",
       alt: "vs3bet_SBvBB.png",
+      className: "vs3bet",
     },
     {
       title: "vs 4bet v UTG-MP",
       imageSrc: "assets/images/vs4bet_SBvUTG-MP.png",
       alt: "vs4bet_SBvUTG-MP.png",
+      className: "vs4bet",
     },
     {
       title: "vs 4bet v CO",
